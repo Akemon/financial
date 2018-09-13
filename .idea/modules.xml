@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.iml" filepath="$PROJECT_DIR$/.idea/modules/api.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_main.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_test.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/entity.iml" filepath="$PROJECT_DIR$/.idea/modules/entity.iml" group="entity" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/entity/entity_main.iml" filepath="$PROJECT_DIR$/.idea/modules/entity/entity_main.iml" group="entity" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/entity/entity_test.iml" filepath="$PROJECT_DIR$/.idea/modules/entity/entity_test.iml" group="entity" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/financial.iml" filepath="$PROJECT_DIR$/.idea/modules/financial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/financial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/financial_main.iml" group="financial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/financial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/financial_test.iml" group="financial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/manager.iml" filepath="$PROJECT_DIR$/.idea/modules/manager.iml" group="manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/manager/manager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/manager/manager_main.iml" group="manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/manager/manager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/manager/manager_test.iml" group="manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz.iml" group="quartz" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz/quartz_main.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz/quartz_main.iml" group="quartz" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz/quartz_test.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz/quartz_test.iml" group="quartz" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/seller.iml" filepath="$PROJECT_DIR$/.idea/modules/seller.iml" group="seller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/seller/seller_main.iml" filepath="$PROJECT_DIR$/.idea/modules/seller/seller_main.iml" group="seller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/seller/seller_test.iml" filepath="$PROJECT_DIR$/.idea/modules/seller/seller_test.iml" group="seller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger.iml" group="swagger" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger/swagger_main.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger/swagger_main.iml" group="swagger" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger/swagger_test.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger/swagger_test.iml" group="swagger" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util.iml" group="util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="util" />
+    </modules>
+  </component>
+</project>

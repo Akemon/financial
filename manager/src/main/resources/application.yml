@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/db_financial_manager?characterEncoding=utf-8
+
+  jpa:
+    show-sql: true
+
+
+server:
+  servlet:
+    context-path: /manager
+  port: 8081

@@ -1,0 +1,42 @@
+group 'com.hk.'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+apply from: "$rootDir/dependencies.gradle"
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'war'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile libs.common
+        testCompile libs.test
+    }
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+}
+
+//创建文件目录的闭包函数
+def createDir = {
+    path ->
+        File dir = new File(path);
+        if(!dir.exists()){
+            dir.mkdir();
+        }
+}
+//定义一个创建目录的任务
+task makeJavaDir(){
+    def paths=['src/main/java','src/main/resources','src/test/java','src/test/resources']
+    doFirst{
+        paths.forEach(createDir)
+    }
+}
