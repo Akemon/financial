@@ -7,6 +7,7 @@ package com.hk.manager.service;
 
 import com.hk.entity.Product;
 import com.hk.entity.enums.ProductStatus;
+import com.hk.manager.error.ErrorEnum;
 import com.hk.manager.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,10 +86,10 @@ public class ProductService {
                 if(idList!=null&&idList.size()>0){
                     predicates.add(idCol.in(idList));
                 }
-                if(BigDecimal.ZERO.compareTo(minRewardRate)<0){
+                if(minRewardRate!=null && BigDecimal.ZERO.compareTo(minRewardRate)<0){
                     predicates.add(criteriaBuilder.ge(rewardRateCol,minRewardRate));
                 }
-                if(BigDecimal.ZERO.compareTo(maxRewardRate)<0){
+                if(maxRewardRate!=null && BigDecimal.ZERO.compareTo(maxRewardRate)<0){
                     predicates.add(criteriaBuilder.le(rewardRateCol,maxRewardRate));
                 }
                 if(statusList!=null&&statusList.size()>0){
@@ -125,11 +126,11 @@ public class ProductService {
      * @param product
      */
     private void checkProduct(Product product) {
-        Assert.notNull(product.getId(),"编号不能为空");
+        Assert.notNull(product.getId(), ErrorEnum.ID_NOT_NULL.getCode());
         Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate())<0
-                &&BigDecimal.valueOf(30).compareTo(product.getRewardRate())>=0,"收益率范围错误");
+                &&BigDecimal.valueOf(0.3).compareTo(product.getRewardRate())>=0,ErrorEnum.REWARD_ERROR.getCode());
         //取整与原来的数进行比较
-        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount())==0,"投资步长必须为整数");
+        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount())==0,ErrorEnum.STEPAMOUNT_ERROR.getCode());
     }
 
 }

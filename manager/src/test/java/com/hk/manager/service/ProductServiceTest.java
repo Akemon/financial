@@ -36,7 +36,7 @@ public class ProductServiceTest {
     public void addProduct() {
         Product product = new Product();
         product.setStatus("AUDITING");
-        product.setId("154545");
+        product.setId("154543245");
         product.setLockTerm(0);
         product.setStepAmount(BigDecimal.valueOf(1));
         product.setThresholdMount(BigDecimal.valueOf(1000));

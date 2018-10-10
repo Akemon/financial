@@ -2,6 +2,8 @@ package com.hk.manager.controller;
 
 import com.hk.entity.Product;
 import com.hk.manager.service.ProductService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -21,6 +23,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping("/product")
+@Api(tags = "product",description = "产品相关")
 public class ProductController {
 
     @Autowired
@@ -31,6 +34,7 @@ public class ProductController {
      * @param product
      * @return
      */
+    @ApiOperation(value = "创建产品",notes = "根据对应业务规则创建相应的产品")
     @RequestMapping(value = "addProduct",method = RequestMethod.POST)
     public Product addProduct(@RequestBody Product product){
         log.info("创建产品，参数={}",product);
@@ -42,6 +46,7 @@ public class ProductController {
     public String hello(){
         return "hello world";
     }
+
 
     @RequestMapping(value = "getProductById",method = RequestMethod.GET)
     public Product getProductById(@RequestParam("id")String id){

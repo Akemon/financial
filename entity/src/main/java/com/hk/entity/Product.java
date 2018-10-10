@@ -1,5 +1,6 @@
 package com.hk.entity;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -34,6 +35,7 @@ public class Product {
     private BigDecimal rewardRate;
 
     //产品状态
+    @ApiModelProperty(value = "产品状态",dataType = "com.hk.entity.enums.ProductStatus")
     private String status;
 
     //产品备注
@@ -46,6 +48,20 @@ public class Product {
     private Date updateTime;
 
     private String updateUser;
+
+
+    public Product() {
+    }
+
+    public Product(String id, String name, BigDecimal thresholdMount, BigDecimal stepAmount, Integer lockTerm, BigDecimal rewardRate, String status) {
+        this.id = id;
+        this.name = name;
+        this.thresholdMount = thresholdMount;
+        this.stepAmount = stepAmount;
+        this.lockTerm = lockTerm;
+        this.rewardRate = rewardRate;
+        this.status = status;
+    }
 
     @Override
     public String toString() {
